@@ -1,0 +1,24 @@
+/*Font Import*/
+
+/*General*/
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*Body*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /*87%*/
+  line-height: 1.5;
+  margin: auto; /*0*/
+  width: 100%;
+  /*padding: 0;*/
+  background-color: #f4f4f4;
+}

@@ -236,6 +236,7 @@ a {
 }
 
 .time {
+    display: flex;
     color: #AFAEAD;
     font-family: "LINE Seed JP_TTF";
     font-size: 32px;

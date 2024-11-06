@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="/css/spendingsStyle.css">
+
+    <script src="/js/timeProcess.js"></script>
     <title>Spendings</title>
 </head>
 
@@ -69,17 +71,17 @@
                             <div class="apps-productivity">
                                 <a href="/html/productivity.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <mask id="mask0_18_782" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                        y="0" width="40" height="40">
-                                        <rect width="40" height="40" fill="#D9D9D9" />
-                                    </mask>
-                                    <g mask="url(#mask0_18_782)">
-                                        <path
-                                            d="M13.3332 33.3335H26.6665V28.3335C26.6665 26.5002 26.0137 24.9307 24.7082 23.6252C23.4026 22.3196 21.8332 21.6668 19.9998 21.6668C18.1665 21.6668 16.5971 22.3196 15.2915 23.6252C13.9859 24.9307 13.3332 26.5002 13.3332 28.3335V33.3335ZM6.6665 36.6668V33.3335H9.99984V28.3335C9.99984 26.6391 10.3957 25.0488 11.1873 23.5627C11.979 22.0766 13.0832 20.8891 14.4998 20.0002C13.0832 19.1113 11.979 17.9238 11.1873 16.4377C10.3957 14.9516 9.99984 13.3613 9.99984 11.6668V6.66683H6.6665V3.3335H33.3332V6.66683H29.9998V11.6668C29.9998 13.3613 29.604 14.9516 28.8123 16.4377C28.0207 17.9238 26.9165 19.1113 25.4998 20.0002C26.9165 20.8891 28.0207 22.0766 28.8123 23.5627C29.604 25.0488 29.9998 26.6391 29.9998 28.3335V33.3335H33.3332V36.6668H6.6665Z"
-                                            fill="#AFAEAD" />
-                                    </g>
-                                </svg>
+                                        fill="none">
+                                        <mask id="mask0_18_782" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                            y="0" width="40" height="40">
+                                            <rect width="40" height="40" fill="#D9D9D9" />
+                                        </mask>
+                                        <g mask="url(#mask0_18_782)">
+                                            <path
+                                                d="M13.3332 33.3335H26.6665V28.3335C26.6665 26.5002 26.0137 24.9307 24.7082 23.6252C23.4026 22.3196 21.8332 21.6668 19.9998 21.6668C18.1665 21.6668 16.5971 22.3196 15.2915 23.6252C13.9859 24.9307 13.3332 26.5002 13.3332 28.3335V33.3335ZM6.6665 36.6668V33.3335H9.99984V28.3335C9.99984 26.6391 10.3957 25.0488 11.1873 23.5627C11.979 22.0766 13.0832 20.8891 14.4998 20.0002C13.0832 19.1113 11.979 17.9238 11.1873 16.4377C10.3957 14.9516 9.99984 13.3613 9.99984 11.6668V6.66683H6.6665V3.3335H33.3332V6.66683H29.9998V11.6668C29.9998 13.3613 29.604 14.9516 28.8123 16.4377C28.0207 17.9238 26.9165 19.1113 25.4998 20.0002C26.9165 20.8891 28.0207 22.0766 28.8123 23.5627C29.604 25.0488 29.9998 26.6391 29.9998 28.3335V33.3335H33.3332V36.6668H6.6665Z"
+                                                fill="#AFAEAD" />
+                                        </g>
+                                    </svg>
                                 </a>
                             </div>
                             <div class="apps-logging">
@@ -154,10 +156,12 @@
                 </div>
                 <div class="date-time">
                     <div class="date">
-                        <h3>12/20</h3>
+                        <h3 id="date">12/20</h3>
                     </div>
                     <div class="time">
-                        <h3>PM 12:00</h3>
+                        <h3 id="hour">PM 12</h3>
+                        <h3 id="dots">:</h3>
+                        <h3 id="minutes">00</h3>
                     </div>
                 </div>
             </div>
@@ -410,20 +414,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn-add-record">
-                    <div class="btn-add-record-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <mask id="mask0_18_753" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="60" height="60">
-                                <rect width="60" height="60" fill="#D9D9D9" />
-                            </mask>
-                            <g mask="url(#mask0_18_753)">
-                                <path d="M27.5 32.5H12.5V27.5H27.5V12.5H32.5V27.5H47.5V32.5H32.5V47.5H27.5V32.5Z"
-                                    fill="white" />
-                            </g>
-                        </svg>
+                <a href="#" class="btn-add-record">
+                    <div class="btn-add-record-appearence">
+                        <div class="btn-add-record-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                                fill="none">
+                                <mask id="mask0_18_753" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="60" height="60">
+                                    <rect width="60" height="60" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_18_753)">
+                                    <path d="M27.5 32.5H12.5V27.5H27.5V12.5H32.5V27.5H47.5V32.5H32.5V47.5H27.5V32.5Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

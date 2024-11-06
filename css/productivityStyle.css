@@ -1,0 +1,455 @@
+/*Font Import*/
+.kaushan-script-regular {
+    font-family: "Kaushan Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'LINE Seeds JP';
+    src: url('/font/LINESeedJP_TTF_Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LINE Seeds JP Bold';
+    src: url('/font/LINESeedJP_TTF_Bd.ttf') format('truetype');
+}
+
+
+/*General*/
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*Body*/
+body {
+    font-family: 'LINE Seeds JP', "Kaushan Script", 'Roboto', sans-serif;
+    font-size: 87%;
+    width: 75%;
+    /* Could be anything, but 75% works here. */
+    margin: auto;
+    /* This is what center the content div itself. */
+    /*87%*/
+    /*line-height: 1.5;*/
+    /* margin: auto; */
+    /*margin: auto;
+    padding: auto;*/
+    /*0, Vegetable: auto*/
+    /* margin: auto; */
+    background: var(--Background, #191919);
+    color: #fff;
+    /* max-width: 1120px; */
+}
+
+/*Heading and Constant settings*/
+h1 {
+    font-family: 'LINE Seeds JP Bold';
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 64px;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+h4 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+h5 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+span {
+    color: #8BC24A;
+}
+
+/*Link and Button*/
+a {
+    text-decoration: none;
+}
+
+#btn {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn h4 {
+    color: #fff;
+}
+#btn .panel-selected{
+    color: #8BC24A;
+}
+
+
+.container {
+    display: flex;
+    width: 1384px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.all-content-alignment {
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+}
+
+.left-nav-bar {
+    display: flex;
+    width: 245px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 84px;
+}
+
+.matcha-header {
+    display: flex;
+    height: 55px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    /* 48px */
+    background: #363533;
+}
+
+.matcha-header a {
+    color: var(--MainTheme, #8BC24A);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: var(--MainTheme, #8BC24A);
+    font-family: "Kaushan Script";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.account {
+    display: flex;
+    width: 209px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    align-self: stretch;
+}
+
+.apps {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #363533;
+}
+
+.apps-content {
+    display: flex;
+    width: 141px;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-panel {
+    display: flex;
+    width: 132px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.main-panel h4 {
+    width: 100px;
+}
+
+.date-time {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #363533;
+}
+
+.date {
+    color: #FFF;
+    font-family: "LINE Seed JP_TTF";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    /* 48px */
+}
+
+.time {
+    color: #AFAEAD;
+    font-family: "LINE Seed JP_TTF";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 48px */
+}
+
+.spendings-overall {
+    display: flex;
+    width: 1109px;
+    height: 957px;
+    padding: 60px 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 57px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    color: black;
+}
+
+.spendings-overall-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 34px;
+}
+
+.spendings-overall-header h3 {
+    color: #AFAEAD;
+}
+
+.remains-area {
+    display: flex;
+    align-items: center;
+    gap: 85px;
+    align-self: stretch;
+}
+
+.remains-graph-and-explain {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.remains-progress-circle-group {
+    width: 143px;
+    height: 143px;
+    position: relative;
+}
+
+.circle-all {
+    position: absolute;
+}
+
+.circle-remains {
+    position: absolute;
+}
+
+.remains-progress-circle-group h3 {
+    font-family: "LINE Seeds JP Bold";
+    position: absolute;
+    color: #1C8528;
+    text-align: center;
+    top: 60px;
+    left: 40px;
+}
+
+.remains-explain-gorup {
+    display: flex;
+    width: 468px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.remains-values {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    gap: 15px;
+}
+
+.remains-values h2 {
+    font-family: "LINE Seeds JP Bold";
+    color: #1C8528;
+}
+
+.remains-values h4 {
+    color: #AFAEAD;
+}
+
+.remains-explain {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    align-self: stretch;
+}
+
+.remains-explain h4 {
+    color: #AFAEAD;
+}
+
+.remains-equalTo {
+    display: flex;
+    height: 45px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "LINE Seeds JP Bold";
+    color: #8BC24A;
+}
+
+.pomodoro-inputs {
+    display: flex;
+    width: 616px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    align-self: stretch;
+}
+
+.input-field {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 2px solid var(--DarkTheme, #1C8528);
+}
+
+.input-field-error {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 2px solid var(--DarkTheme, #F30);
+}
+
+.input-title{
+    color: #1C8528;
+    font-size: 18px;
+    font-family: "LINE Seeds JP bold";
+}
+
+#btn-presets {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--DarkTheme, #1C8528);
+    background: rgba(28, 133, 40, 0.30);
+    color: #1C8528;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+}
+
+.time-presets{
+    display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.grey{
+    color: #AFAEAD;
+    font-size: 14px;
+    font-family: "LINE Seeds JP";
+}
+
+.red{
+    color: #FF0000;
+    font-size: 14px;
+    font-family: "LINE Seeds JP";
+}
+.btn-add-record {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 30px;
+    background: var(--DarkTheme, #1C8528);
+    top: 800px;
+    margin-left: 900px;
+}
+
+.option-dev{
+    display: flex;
+padding: 1px 10px;
+align-items: center;
+gap: 10px;
+border-radius: 10px;
+border: 1px solid #FF9D00;
+background: rgba(255, 157, 0, 0.30);
+color: #FF9D00;
+}

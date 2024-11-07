@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: 'LINE Seeds JP';
-    src: url('/font/LINESeedJP_TTF_Rg.ttf') format('truetype');
+    src: url('../font/LINESeedJP_TTF_Rg.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'LINE Seeds JP Bold';
-    src: url('/font/LINESeedJP_TTF_Bd.ttf') format('truetype');
+    src: url('../font/LINESeedJP_TTF_Bd.ttf') format('truetype');
 }
 
 

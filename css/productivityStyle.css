@@ -335,6 +335,7 @@ a {
     align-items: center;
     gap: 3px;
     align-self: stretch;
+    width: 468px;
 }
 
 .remains-explain h4 {
@@ -350,6 +351,12 @@ a {
     gap: 10px;
     font-family: "LINE Seeds JP Bold";
     color: #8BC24A;
+    
+    
+}
+
+.remains-equalTo h3 {
+    font-size: 18px;
 }
 
 .pomodoro-inputs {
